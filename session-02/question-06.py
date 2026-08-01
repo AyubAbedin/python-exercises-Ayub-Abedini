@@ -12,9 +12,9 @@ elif 500000 <= price <= 1000000:
     discount = 10
     final_price = (price-(price*0.1))
 elif price < 500000:
-        final_price = price
-        discount=0
-print("Final Price is: ",final_price,"Dicount is: ", discount,"%")
+     final_price = price
+     discount=0
+print("Final Price is: ",final_price,"Discount is: ", discount,"%")
 
     
     
