@@ -14,7 +14,8 @@ logs = [ ("Ali", "LOGIN", 200),
 
 
 # Counts successful logins
-def count_successful_logins(logs):
+def count_successful_logins(logs: list) -> int:
+    """Count successful logins."""
     count = 0
 
     for i in logs:
@@ -25,7 +26,8 @@ def count_successful_logins(logs):
 
 
 # Counts failed logins
-def count_failed_logins(logs):
+def count_failed_logins(logs: list) -> int:
+    """Count failed logins."""
     count = 0
 
     for i in logs:
@@ -36,7 +38,8 @@ def count_failed_logins(logs):
 
 
 # Finds suspicious users
-def find_suspicious_users(logs):
+def find_suspicious_users(logs: list) -> list:
+    """Find users with repeated failed logins."""
     count = {}
     result = []
 
@@ -58,7 +61,8 @@ def find_suspicious_users(logs):
 
 
 # Counts operations for each user
-def count_user_operations(logs):
+def count_user_operations(logs: list) -> dict:
+    """Count operations for each user."""
     count = {}
 
     for i in logs:
@@ -73,7 +77,8 @@ def count_user_operations(logs):
 
 
 # Generates the final report
-def generate_report(logs):
+def generate_report(logs: list) -> dict:
+    """Generate the final log report."""
     result = {}
 
     result["successful_logins"] = count_successful_logins(logs)

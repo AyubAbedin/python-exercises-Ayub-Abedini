@@ -5,7 +5,8 @@ Created on Wed Sep 16 23:00:59 2026
 @author: AA
 """
 
-def analyze_text(text):
+def analyze_text(text: str) -> dict:
+    """Analyze the given text."""
     letters_count = 0
     digit_count = 0
     letters0 = {}

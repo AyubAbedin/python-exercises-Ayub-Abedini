@@ -11,7 +11,8 @@ transactions = [ ("Ali", "deposit", 5000000),
                  ("Sara", "withdraw", 2000000),
                  ("Reza", "deposit", 10000000) ]
 
-def analyze_transactions(transactions):
+def analyze_transactions(transactions: list) -> None:
+    """Analyze financial transactions."""
     max_deposit = 0
     max_deposit_user = ""
     max_withdraw = 0

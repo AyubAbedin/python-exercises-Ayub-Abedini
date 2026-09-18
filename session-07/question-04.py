@@ -3,7 +3,8 @@ Created on Wed Sep 16 22:21:58 2026
 
 @author: AA
 """
-def check_large_transaction(transaction):
+def check_large_transaction(transaction: tuple) -> bool:
+    """Check if a transaction amount is large."""
     amount = transaction[2]
 
     if amount > 100000000:
@@ -13,7 +14,8 @@ def check_large_transaction(transaction):
 
 
 # Checks if there are more than 3 consecutive withdrawals
-def check_repeated_withdrawals(transactions):
+def check_repeated_withdrawals(transactions: list) -> list:
+    """Check for repeated withdrawals."""
     count = {}
     result = []
 
@@ -36,7 +38,8 @@ def check_repeated_withdrawals(transactions):
 
 
 # Checks if a withdrawal is greater than the user's balance
-def check_balance(transactions):
+def check_balance(transactions: list) -> list:
+    """Check if withdrawals exceed the balance."""
     balance = {}
     result = []
 
@@ -61,7 +64,8 @@ def check_balance(transactions):
 
 
 # Collects all suspicious transactions
-def generate_fraud_report(transactions):
+def generate_fraud_report(transactions: list) -> list:
+    """Generate a report of suspicious transactions."""
     result = []
 
     for t in transactions:

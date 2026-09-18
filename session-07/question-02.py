@@ -4,7 +4,8 @@ Created on Wed Sep 16 23:02:30 2026
 
 @author: AA
 """
-def process_order(customer, *products, **options):
+def process_order(customer: str, *products: str, **options: float) -> dict:
+    """Calculate the final price of an order."""
     prices = {
         "Laptop": 1200000,
         "Mouse": 50000,
